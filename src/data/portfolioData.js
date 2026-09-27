@@ -431,7 +431,7 @@ export const portfolioData = {
       institution: "Fakultas Ilmu Komputer Universitas Esa Unggul",
       credentialNo: "002/BEM-FASILKOM/LTP/XI/2024",
       regNo: null,
-      date: "14 – 15 November",
+      date: "14 – 15 November 2024",
       status: "Kepemimpinan Resmi",
       category: "Kepemimpinan & Organisasi",
       badge: "Ketua Pelaksana",
@@ -440,6 +440,23 @@ export const portfolioData = {
       backImage: null,
       file: "/certificates/sertifikat-ltp-2024.jpg",
       description: "Penghargaan resmi sebagai Ketua Pelaksana Acara 'Leadership Training Program 2024' dengan tema 'Katalisator Aksi: Gerakan Gagasan, Wujudkan Perubahan' yang diikuti oleh lebih dari 112 peserta mahasiswa."
+    },
+    {
+      id: "cert-fasther-2024",
+      title: "Sertifikat Panitia FASTHER 2024 (Fasilkom Gathering)",
+      issuer: "HMJ Teknik Informatika & Sistem Informasi",
+      institution: "Fakultas Ilmu Komputer Universitas Esa Unggul",
+      credentialNo: "001/HMJ-SI-TI/FASTHER/XII/2024",
+      regNo: null,
+      date: "Desember 2024",
+      status: "Panitia Terverifikasi",
+      category: "Kepemimpinan & Organisasi",
+      badge: "Panitia FASTHER 2024",
+      badgeColor: "indigo",
+      image: "/certificates/sertifikat-fasther-2024.jpg",
+      backImage: null,
+      file: "/certificates/sertifikat-fasther-2024.jpg",
+      description: "Sertifikat apresiasi atas partisipasi aktif sebagai Panitia dalam acara Fasilkom Gathering (FASTHER 2024) bertema 'Light a fire, build a brotherhood' yang diselenggarakan oleh HMJ Sistem Informasi & Teknik Informatika Universitas Esa Unggul."
     },
   ],
 
@@ -509,6 +526,16 @@ export const portfolioData = {
       image: "/certificates/sertifikat-ltp-2024.jpg",
       hasCertificate: true,
       certificateFile: "/certificates/sertifikat-ltp-2024.jpg"
+    },
+    {
+      role: "Panitia Pelaksana (Committee Member)",
+      organization: "FASTHER 2024 - Fasilkom Gathering",
+      period: "2024",
+      description: "Berpartisipasi aktif sebagai panitia pelaksana dalam mensukseskan acara Fasilkom Gathering 2024 bertema 'Light a fire, build a brotherhood' yang mempererat kebersamaan seluruh mahasiswa Fakultas Ilmu Komputer.",
+      badge: "Panitia Event",
+      image: "/certificates/sertifikat-fasther-2024.jpg",
+      hasCertificate: true,
+      certificateFile: "/certificates/sertifikat-fasther-2024.jpg"
     },
     {
       role: "Ketua Pelaksana (Event Chairman)",
