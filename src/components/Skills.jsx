@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import {
   Code2,
   Server,
   Database,
   Wrench,
-  Radio,
   Layers,
   BarChart3,
-  Network
+  Network,
+  CheckCircle2,
+  ShieldCheck
 } from 'lucide-react';
 
 export default function Skills() {
@@ -16,25 +17,26 @@ export default function Skills() {
 
   const categoryIcons = {
     "Web Development": Code2,
-    "Data Analysis & Science": BarChart3,
+    "Data Analysis & BI": BarChart3,
     "Network Engineering": Network,
-    "Database Systems": Database,
-    "Developer Tools & Mobile": Wrench,
+    "Software QA & Testing": CheckCircle2,
+    "Database & Tools": Database,
   };
 
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-24 relative bg-slate-50 dark:bg-slate-950/40 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-semibold text-sky-400 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-semibold text-sky-600 dark:text-sky-400 uppercase tracking-wider">
             Technical Stack
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Skills & Technologies
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Skills & Keahlian Teknis
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
-            Languages, frameworks, databases, and developer utilities that I use to bring ideas to reality.
+          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+            Penguasaan bahasa pemrograman, framework modern, teknologi rekayasa data & BI, pengujian software otomatis, dan konfigurasi jaringan enterprise.
           </p>
         </div>
 
@@ -45,20 +47,20 @@ export default function Skills() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-slate-900/60 border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700/80 transition-all group glow-card"
+                className="rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-indigo-400 dark:hover:border-slate-700/80 transition-all group glow-card shadow-sm"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 rounded-xl bg-slate-800/80 text-indigo-400 group-hover:text-sky-400 group-hover:bg-slate-800 transition-colors">
+                    <div className="p-3 rounded-2xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-sky-400 group-hover:scale-105 transition-all">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white text-base">
+                      <h3 className="font-bold text-slate-900 dark:text-white text-base">
                         {group.category}
                       </h3>
                     </div>
                   </div>
-                  <p className="text-xs text-slate-400 mb-5 leading-relaxed">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mb-5 leading-relaxed">
                     {group.description}
                   </p>
 
@@ -67,10 +69,15 @@ export default function Skills() {
                     {group.items.map((skill, sIdx) => (
                       <div
                         key={sIdx}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/80 border border-slate-800/90 text-xs font-medium text-slate-200 hover:border-indigo-500/50 hover:bg-slate-900 transition-all"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/90 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-indigo-500/50 hover:bg-white dark:hover:bg-slate-900 transition-all"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
                         <span>{skill.name}</span>
+                        {skill.level === 'Certified' && (
+                          <span className="text-[10px] px-1.5 py-0.2 bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-md">
+                            BNSP
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>
